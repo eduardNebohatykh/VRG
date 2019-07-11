@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">VRGTask</string>
+
+    <!-- Tab Content -->
+    <string name="nav_emailed">Most Emailed</string>
+    <string name="nav_shared">Most Shared</string>
+    <string name="nav_viewed">Most Viewed</string>
+
 </resources>
