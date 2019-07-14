@@ -14,6 +14,12 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+
+        debug {
+            buildConfigField "String", "SERVER_URL", "\"https://api.nytimes.com/svc/mostpopular/v2/\""
+            buildConfigField "String", "API_KEY", "\"CGrxx06Tyc6J5RS8GluV3d093RbZUSg8\""
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -41,8 +47,12 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
     implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.12.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.1'
 
     // RxJava
     implementation 'io.reactivex.rxjava2:rxjava:2.2.5'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+
+    // Timber
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 }
