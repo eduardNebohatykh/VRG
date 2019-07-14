@@ -14,7 +14,7 @@ class ViewPagerAdapter(fm: FragmentManager, private val context: Context) : Frag
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
-        return when(position) {
+        return when (position) {
             0 -> context.getString(R.string.nav_emailed)
             1 -> context.getString(R.string.nav_shared)
             2 -> context.getString(R.string.nav_viewed)
